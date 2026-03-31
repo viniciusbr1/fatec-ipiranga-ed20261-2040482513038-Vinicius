@@ -6,7 +6,7 @@
 // === PILHA ===
 
 // Quantidade máxima de elementos que a pilha pode armazenar
-#define MAX 5
+#define MAX 4
 
 // Estrutura da pilha usando vetor
 int pilha[MAX];
