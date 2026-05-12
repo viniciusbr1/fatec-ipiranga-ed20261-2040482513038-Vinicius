@@ -46,7 +46,7 @@ int obterFB(struct No* n) {
 }
 
 int main() {
-    // Montagem manual da árvore: 20 -> 10 -> 5 -> 2
+  
     struct No* raiz = criarNo(20);
     raiz->esq = criarNo(10);
     raiz->esq->esq = criarNo(5);
