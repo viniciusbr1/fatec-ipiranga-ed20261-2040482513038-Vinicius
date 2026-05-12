@@ -1,15 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-// Estrutura do nó
+
 struct No {
     int valor;
-    int altura; // incluído conforme modelo do professor
+    int altura; 
     struct No *esq;
     struct No *dir;
 };
 
-// Função para criar um novo nó
+
 struct No* criarNo(int valor) {
     struct No* novo = (struct No*) malloc(sizeof(struct No));
     novo->valor = valor;
@@ -18,7 +18,7 @@ struct No* criarNo(int valor) {
     return novo;
 }
 
-// Função recursiva para calcular altura
+
 int calcularAltura(struct No* n) {
     // Caso base
     if (n == NULL)
@@ -34,7 +34,7 @@ int calcularAltura(struct No* n) {
         return 1 + alturaDir;
 }
 
-// Função para obter o fator de balanceamento
+
 int obterFB(struct No* n) {
     if (n == NULL)
         return 0;
@@ -42,7 +42,6 @@ int obterFB(struct No* n) {
     int alturaEsq = calcularAltura(n->esq);
     int alturaDir = calcularAltura(n->dir);
 
-    // FB = altura esquerda - altura direita
     return alturaEsq - alturaDir;
 }
 
@@ -53,10 +52,10 @@ int main() {
     raiz->esq->esq = criarNo(5);
     raiz->esq->esq->esq = criarNo(2);
 
-    // Cálculo do fator de balanceamento da raiz
+  
     int fb = obterFB(raiz);
 
-    // Exibição do resultado
+   
     printf("Fator de Balanceamento da raiz (20): %d\n", fb);
 
     return 0;
