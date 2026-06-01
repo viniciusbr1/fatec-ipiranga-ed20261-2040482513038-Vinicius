@@ -1,3 +1,4 @@
+/* RA: 2040482513038 - VINICIUS CARVALHO SANCHEZ */
 #include <stdio.h>
 
 long long potenciaRapida(long long base, int exp, int *chamadas)
